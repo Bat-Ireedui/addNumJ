@@ -1,0 +1,32 @@
+{
+  "name": "my-awesome-greeter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bat-Ireedui/addNumJ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bat-Ireedui/addNumJ/issues"
+  },
+  "homepage": "https://github.com/Bat-Ireedui/addNumJ#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
